@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vending Machine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="js/jquery"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <h1>Vending Machine</h1>
+  </header>
+  <container class="container-fluid " id="container" grid-auto-rows: 1fr>
+    <div class="row d-flex justify-content-center">
+      <div class="col-3">
+        <article id="item1" class="article h-100">
+          <div class="num" id="num1">1</div>
+          <div id="name1">Item</div>
+          <div id="cost1">
+            <p>$x.xx</p>
+          </div>
+          <div class="quantity">
+            <p>Quantity Left:</p><span id="numItem1">X</span>
+          </div>
+        </article>
+      </div>
+      <div class="col-3">
+        <article id="item2" class="article h-100">
+          <div class="num" id="num2">2</div>
+          <div class="name" id="name2">Item</div>
+          <div class="cost" id="cost2">
+            <p>$x.xx</p>
+          </div>
+          <div class="quanity">
+            <p>Quantity Left:</p><span id="numItem2">X</span>
+          </div>
+        </article>
+      </div>
+      <div class="col-3">
+        <article id="item3" class="article h-100">
+          <div class="num" id="num3">3</div>
+          <div class="name" id="name3">Item</div>
+          <div class="cost" id="cost3">
+            <p>$x.xx</p>
+          </div>
+          <div class="quanity">
+            <p>Quantity Left:</p><span id="numItem3">X</span>
+          </div>
+        </article>
+      </div>
+      <div class="col-sm-3">
+        <article id="addMoney" class="businesslogic h-100">
+          <div>
+            <span id="money">Total $ In</span><br>
+            <span id="viewMoney" class="viewport">0.00</span><br>
+          </div>
+          <div>
+            <button class="button" type="reset" id="dollarButton">Add dollar</button>
+            <button class="button" id="quarterButton">Add quarter</button>
+          </div>
+          <div>
+            <button class="button" id="dimeButton">Add dime</button>
+            <button class="button" id="nickelButton">Add nickle</button>
+          </div>
+      </div>
+      <div class="clear-float"></div>
+      </article>
+    </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-3">
+        <article id="item4" class="article h-100">
+          <div class="num" id="num4">4</div>
+          <div class="name" id="name4">Item</div>
+          <div class="cost" id="cost4">
+            <p>$x.xx</p>
+          </div>
+          <div class="quanity">
+            <p>Quantity Left:</p><span id="numItem4">X</span>
+          </div>
+        </article>
+      </div>
+      <div class="col-3">
+        <article id="item5" class="article h-100">
+          <div class="num" id="num5">5</div>
+          <div class="name" id="name5">Item</div>
+          <div class="cost" id="cost5">
+            <p>$x.xx</p>
+          </div>
+          <div class="quanity">
+            <p>Quantity Left:</p><span id="numItem5">X</span>
+          </div>
+        </article>
+      </div>
+      <div class="col-3">
+        <article id="item6" class="article h-100">
+          <div class="num" id="num6">6</div>
+          <div class="name" id="name6">Item</div>
+          <div class="cost" id="cost6">
+            <p>$x.xx</p>
+          </div>
+          <div class="quanity">
+            <p>Quantity Left:</p><span id="numItem6">X</span>
+          </div>
+        </article>
+      </div>
+      <div class="col-sm-3">
+        <article id="getItem" class="businesslogic h-100">
+          <div>
+            <span id="message">Messages</span><br>
+            <span id="viewMessage" class="viewport" style:"float-left"></span>
+            <br><br>
+            <div class="name">Item:
+            <span id="viewItem" class="viewport"></span></div>
+          </div>
+          </form>
+          <button class="button" id="purchaseButton">Make Purchase</button>
+      </div>
+      <div class="clear-float"></div>
+      </article>
+    </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-3">
+        <article id="item7" class="article h-100">
+          <div class="num" id="num7">7</div>
+          <div class="name" id="name7">Item</div>
+          <div class="cost" id="cost7">
+            <p>$x.xx</p>
+          </div>
+          <div class="quanity">
+            <p>Quantity Left:</p><span id="numItem7">X</span>
+          </div>
+        </article>
+      </div>
+      <div class="col-3">
+        <article id="item8" class="article h-100">
+          <div class="num" id="num8">8</div>
+          <div class="name" id="name8">Item</div>
+          <div class="cost" id="cost8">
+            <p>$x.xx</p>
+          </div>
+          <div class="quanity">
+            <p>Quantity Left:</p><span id="numItem8">X</span>
+          </div>
+        </article>
+      </div>
+      <div class="col-3">
+        <article id="item9" class="article h-100">
+          <div class="num" id="num9">9</div>
+          <div class="name" id="name9">Item</div>
+          <div class="cost" id="cost9">
+            <p>$x.xx</p>
+          </div>
+          <div class="quanity">
+            <p>Quantity Left:</p><span id="numItem9">X</span>
+          </div>
+        </article>
+      </div>
+      <div class="col-sm-3">
+        <article id="getChange" class="businesslogic h-100">
+          <div>
+            <span id="change">Change</span><br>
+            <span id="viewChange" class="viewport"></span><br>
+            <button class="button" id="changeButton">Change Return</button>
+          </div>
+          <div class="clear-float"></div>
+        </article>
+      </div>
+    </div>
+  </container>
+
+
+  <!-- Bootstrap Dependencies -->
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
